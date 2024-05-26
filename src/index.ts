@@ -18,6 +18,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+  app.get("/ping", (_req: Request, res: Response) => {
+    return res.send("pong 🏓");
+  });
+
 //Routes
 
 app.listen(port, async () => {
