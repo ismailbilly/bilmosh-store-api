@@ -6,10 +6,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const pino_1 = __importDefault(require("pino"));
 const pino_2 = __importDefault(require("pino"));
 const dayjs_1 = __importDefault(require("dayjs"));
-const config_1 = __importDefault(require("config"));
 const fileTransport = pino_1.default.transport({
     target: "pino/file",
-    options: { destination: `logging/logs/${config_1.default.get('error_log_file_name')}` }
+    options: { destination: `logging/logs/${process.env.ERROR_LOG_FILE_NAME}` },
 });
 const log = (0, pino_2.default)({
     transport: {

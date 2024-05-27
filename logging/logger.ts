@@ -5,7 +5,7 @@ import config from "config";
 
 const fileTransport = pino.transport({
   target: "pino/file",
-  options: {destination: `logging/logs/${config.get<string>('error_log_file_name')}`}
+  options: { destination: `logging/logs/${process.env.ERROR_LOG_FILE_NAME}` },
 });
 
 const log = logger({

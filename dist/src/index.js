@@ -15,14 +15,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //Packages
 const express_1 = __importDefault(require("express"));
 const dotenv_1 = __importDefault(require("dotenv"));
-const config_1 = __importDefault(require("config"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 //Utils
 const db_1 = __importDefault(require("./utils/db"));
 const swagger_1 = __importDefault(require("./utils/swagger"));
 const logger_1 = __importDefault(require("../logging/logger"));
 dotenv_1.default.config();
-const port = config_1.default.get("port");
+//const port = config.get<number>("port");
+const port = Number(process.env.PORT) || 4000;
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));

@@ -10,7 +10,8 @@ import swaggerDocs from "./utils/swagger";
 import logger from "../logging/logger";
 
 dotenv.config();
-const port = config.get<number>("port");
+//const port = config.get<number>("port");
+const port = Number(process.env.PORT )|| 4000
 
 const app: Express = express();
 

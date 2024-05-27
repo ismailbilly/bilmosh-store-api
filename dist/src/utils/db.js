@@ -13,11 +13,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
-const config_1 = __importDefault(require("config"));
 const logger_1 = __importDefault(require("../../logging/logger"));
 function connectDB() {
     return __awaiter(this, void 0, void 0, function* () {
-        const dbUri = config_1.default.get("dbUri");
+        const dbUri = process.env.DBURI;
         try {
             yield mongoose_1.default.connect(dbUri);
             logger_1.default.info("DB connected");
