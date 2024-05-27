@@ -123,5 +123,5 @@
           "*": ["node_modules/*", "src/types/*"]
         }
       },
-      "include": ["./src/**/*", "./config/**/*"]
+      "include": ["./api/*.ts", "./*.js", "src/**/*.ts"]
     }
