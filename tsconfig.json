@@ -123,5 +123,5 @@
           "*": ["node_modules/*", "src/types/*"]
         }
       },
-      "include": ["./src/**/*"]
+      "include": ["./src/**/*", "./config/**/*"]
     }
