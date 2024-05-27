@@ -12,11 +12,6 @@
     "start:dev": "ts-node-dev --respawn --transpile-only src/index.ts | pino-pretty"
   },
 
-    "pre-commit": [
-      "ts.check",
-      "build",
-      "add-build"
-  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
